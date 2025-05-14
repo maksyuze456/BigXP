@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
+// oprette booking(eksterne system fordi kunder skal oprette bookingen)
+//se alle booking(intern system personale da de skal administrer det)
+//redigere booking(intern system personale da de skal administrer det)
+//slet booking(intern system personale da de skal administrer det)
+//Bushra laver det
 @RestController
 @RequestMapping("/booking")
 public class BookingRestController {
@@ -22,5 +26,6 @@ public class BookingRestController {
     public ResponseEntity<List<Booking>> allBookings() {
         return new ResponseEntity<List<Booking>>(bookingRepository.findAll(), HttpStatus.OK);
     }
+
 
 }

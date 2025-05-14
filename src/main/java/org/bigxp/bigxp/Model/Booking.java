@@ -1,28 +1,26 @@
 package org.bigxp.bigxp.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int BookingId;
     private String name;
-    private String description;
-    private int lane;
-    private double duration;
+    private String email;
+    private int telefon;
 
-    public Booking() {
+    @ManyToOne
+    @JoinColumn
+    private Activity activity;
+
+    public int getBookingId() {
+        return BookingId;
     }
 
-    public Booking(String name, String description, int lane, double duration) {
-        this.name = name;
-        this.description = description;
-        this.lane = lane;
-        this.duration = duration;
+    public void setBookingId(int bookingId) {
+        BookingId = bookingId;
     }
 
     public String getName() {
@@ -33,27 +31,27 @@ public class Booking {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public int getLane() {
-        return lane;
+    public int getTelefon() {
+        return telefon;
     }
 
-    public void setLane(int lane) {
-        this.lane = lane;
+    public void setTelefon(int telefon) {
+        this.telefon = telefon;
     }
 
-    public double getDuration() {
-        return duration;
+    public Activity getActivity() {
+        return activity;
     }
 
-    public void setDuration(double duration) {
-        this.duration = duration;
+    public void setActivity(Activity activity) {
+        this.activity = activity;
     }
 }
