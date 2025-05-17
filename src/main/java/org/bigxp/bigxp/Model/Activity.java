@@ -14,6 +14,7 @@ public class Activity {
     private double price;
     private double duration;
     private int lane;
+    private String img;
 
     public int getActivityId() {
         return ActivityId;
@@ -53,5 +54,13 @@ public class Activity {
 
     public void setLane(int lane) {
         this.lane = lane;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
