@@ -5,9 +5,7 @@ import org.bigxp.bigxp.Repository.ActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +19,13 @@ public class ActivityController {
     @GetMapping("/activites")
     public ResponseEntity<List<Activity>> getActivities() {
         return new ResponseEntity<List<Activity>>(activityRepository.findAll(), HttpStatus.OK);
+    }
+
+    @PutMapping("/activites/{activityId}")
+    public ResponseEntity<Activity> putActivity(@PathVariable int activityId, @RequestBody Activity activity) {
+        activity.setActivityId(Integer.valueOf(activityId));
+        Activity updatedActivity = activityRepository.save(activity);
+        return new ResponseEntity<>(updatedActivity, HttpStatus.OK);
     }
 
 }
