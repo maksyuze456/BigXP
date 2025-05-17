@@ -9,18 +9,18 @@ import jakarta.persistence.Id;
 public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int AcivityId;
+    private int ActivityId;
     private String name;
     private double price;
     private double duration;
     private int lane;
 
-    public int getAcivityId() {
-        return AcivityId;
+    public int getActivityId() {
+        return ActivityId;
     }
 
-    public void setAcivityId(int acivityId) {
-        AcivityId = acivityId;
+    public void setActivityId(int acivityId) {
+        ActivityId = acivityId;
     }
 
     public String getName() {
