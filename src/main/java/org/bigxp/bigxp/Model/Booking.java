@@ -12,8 +12,9 @@ public class Booking {
     private int telefon;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "activity_activity_id")
     private Activity activity;
+
 
     public int getBookingId() {
         return BookingId;
