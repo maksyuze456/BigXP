@@ -24,7 +24,7 @@ public class InitData implements CommandLineRunner {
 
     @Autowired
     EmployeeRepository employeeRepository;
-
+   
     @Autowired
     LogIndRepository logIndRepository;
 
