@@ -38,6 +38,7 @@ public class InitData implements CommandLineRunner {
         a1.setPrice(150.0);
         a1.setDuration(90.0);
         a1.setLane(5);
+        a1.setImg("https://oplevelser-i-koebenhavn.dk/wp-content/uploads/2025/03/483910774_1185013790299971_8747905315546713637_n.jpg");
         activityRepository.save(a1);
 
         Activity a2 = new Activity();
@@ -45,6 +46,7 @@ public class InitData implements CommandLineRunner {
         a2.setPrice(50.0);
         a2.setDuration(30.0);
         a2.setLane(1);
+        a2.setImg("https://as1.ftcdn.net/v2/jpg/01/29/46/04/1000_F_129460406_WEmBjX8QYACyzeCeAbhtu5iRS3JfbjVy.jpg");
         activityRepository.save(a2);
 
         Booking b1 = new Booking();

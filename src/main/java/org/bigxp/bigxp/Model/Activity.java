@@ -9,18 +9,19 @@ import jakarta.persistence.Id;
 public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int AcivityId;
+    private int ActivityId;
     private String name;
     private double price;
     private double duration;
     private int lane;
+    private String img;
 
-    public int getAcivityId() {
-        return AcivityId;
+    public int getActivityId() {
+        return ActivityId;
     }
 
-    public void setAcivityId(int acivityId) {
-        AcivityId = acivityId;
+    public void setActivityId(int acivityId) {
+        ActivityId = acivityId;
     }
 
     public String getName() {
@@ -53,5 +54,13 @@ public class Activity {
 
     public void setLane(int lane) {
         this.lane = lane;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
